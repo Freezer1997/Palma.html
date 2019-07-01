@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //AUTOR: FREEZER1997-(RICHARD DAVID PALMA CORREA)
+        //DESCRIPCION: PRUEBA
+//Declarar tres objetos de nombre Hugo, Paco y Luis.   Cada objeto debe tener tres atributos:  nombre, edad, ciudad.  Se debe asignar la edad y la ciudad a cada uno de los objetos.
+        var Paco={nombre:"RICHARD",edad:21,ciudad:"Quito"}
+        var Luis={nombre:"DAVID",edad:15,ciudad:"Guayaquil"}
+        var Hugo={nombre:"David",edad:13,ciudad:"Cuenca"}
+
+//1.-Declarar un array de nombre amigos
+var amigos=[]
+
+//2.-Insertar los tres objetos (Hugo, Paco y Luis) en el array amigos.
+amigos.push(Hugo,Luis,Paco);
+
+//3.-Imprimir en consola la longitud del array amigos.
+console.log(amigos.length);
+
+//4.-Crear un nuevo objeto de nombre Elena (con los mismos tres atributos de los objetos antes mencionados: nombre, edad, ciudad)
+var Elena={nombre:"David",edad:15,ciudad:"Quito"}
+
+//5.-amigos.push(Hugo.nombre,Hugo.edad,Hugo.ciudad);
+var numeroDeAmigos=(amigos.length);
+
+//6.-Hacer una función que se llame saludo, la función recibe como parámetro un objeto,  si la edad es par: imprime en consola “Saluton kaj bonvenon”.  Cuando la edad es impar imprime en consola “Hello moto”.
+var saludo=function(edad){
+    if(edad%2===0){
+        console.log('Saluton kaj bonvenon');
+    }else{
+        console.log('Hello moto');
+    }
+}
+
+//7.-Hacer una función de nombre arriba  que recibe un objeto por parámetro e imprime en consola desde el uno, de manera ascendente hasta el atributo edad del objeto recibido como parámetro.
+var arriba=function(edad){
+    if(edad===1){
+        console.log(1);
+    }else{
+         
+          arriba(edad-1);
+           console.log(edad);
+         
+    } 
+   }
+
+//8.-Hacer una función de nombre abajo  que recibe un objeto por parámetro e imprime en consola desde la edad del objeto hasta cero, de manera descendente.
+var abajo=function(edad){
+    if (edad===0) {
+        return 0;
+    } else {
+        console.log(edad)
+        return abajo(edad-1)
+        
+    }
+}
+
+//9.-Hacer una función de nombre edadTotal que recibe cuatro objetos como parámetros y escribe en consola la suma de las edades de los cuatro objetos recibidos.
+var sumaTotal=function(n1,n2,n3,n4){
+    suma=(n1+n2+n3+n4);
+    console.log(suma);
+}
+    
+    
+    </script>
+</body>
+</html>
